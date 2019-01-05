@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{%import "bootstrap/wtf.html" as wtf %}
+
+{%block title%} {{querys.idq}} {%endblock%}
+
+
+{%block content%}
+
+<div class= "container">
+
+    <div class= "row">
+
+        <div class= "col-4">
+		
+		<h3> Hello {%if user %} {{user}} {% else %} User {% endif %} </h3>
+		
+
+
+			    <div class="col-md-auto">
+				
+				<div class="text-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{url_for('static', filename='images/10279_196.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{querys.idq}}</h5>
+                                <p class="card-text">{{querys.string}}</p>
+
+                    </div>
+                </div>
+				
+				
+				</div>
+				
+				
+				</div>
+			
+
+
+
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		<div class= "col-6">
+		{%block comment%}
+		<div class= "question h3">
+		{{querys.string}}
+		</div>
+		
+		<div class= "form-com">
+		
+		{{wtf.quick_form(form)}}
+		
+		</div>
+		
+		<div class = "question-com">
+		
+		<h3> Answers </h3>
+		
+		{%for comment in comments%}
+			
+		<P>     {{comment.string}}</p>
+		
+		{% endfor %}
+		</div>
+		
+		
+		{%endblock%}
+		
+		
+		</div>
+		
+    </div>
+	
+</div>
+
+
+<style>
+.form-com{
+padding-top:3em
+}
+.question{
+margin-top:2em;
+padding-bottom:1em;
+border-bottom:1px solid black;
+}
+
+.question-com{
+padding-top:2em;
+border-top: 1px solid grey
+}
+
+h3{
+margin-top:10px
+}
+
+
+</style>
+
+
+
+
+{%endblock%}

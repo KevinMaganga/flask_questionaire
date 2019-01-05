@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} pics {% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+
+<div class="row">
+<div class="col-9">
+
+ <h4>Hello Since Bootstrap is developed to be mobile first, we use a handful of media queries to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+
+Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.</h4>
+
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='10279_049.jpg')}}" class="img-thumbnail"  alt="Image">
+</div>
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='10279_095.jpg')}}" class="img-thumbnail"  alt="Image">
+</div>
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='10279_100.jpg')}}" class="img-thumbnail"  alt="Image">
+</div>
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='10279_135.jpg')}}" class="img-thumbnail"  alt="Image">
+</div>
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='10279_166.jpg')}}" class="img-thumbnail"  alt="Image">
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+
+{%import "bootstrap/wtf.html" as wtf %}
+
+{%block title%} Sign up {%endblock%}
+
+{%block content %}
+
+<div class= "container">
+
+<div class= "row">
+
+
+ <div class= "col-9">
+		    <div class="col-md-auto">
+		    <div class= "text-left">
+			
+			<h3>Sign up to Q n A</h3>
+			
+			{{wtf.quick_form(form)}}
+			
+			</div>
+			</div>
+
+
+
+        </div>
+
+
+
+ 
+
+</div> 
+</div>
+
+<style>
+.col-9{
+margin-top:80px
+}
+</style>
+{%block footer%}
+
+
+{%endblock%}
+{% endblock %}

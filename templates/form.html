@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{%import "bootstrap/wtf.html" as wtf%}
+
+{% block title %} Home || Q n A  {% endblock %}
+
+
+{% block content %}
+
+<div class= "container">
+
+    <div class= "row">
+	
+	<h4>Hello {%if user %} {{user}} {% else %} Anonymous {% endif %} </h4> 
+        <div class= "col-9">
+		    <div class="col-md-auto">
+		    <div class= "text-left">
+			
+			{{wtf.quick_form(form)}}
+			
+			</div>
+			</div>
+
+
+
+        </div>
+		
+		
+		{% for query in querys %}
+		
+		 <div class="col-md-auto">
+				
+				<div class="text-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{url_for('static', filename='images/10279_196.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{query.idq}}</h5>
+                                <p class="card-text">{{query.string}}</p>
+                                <a href="{{url_for('question', id = query.idq)}}" class="btn btn-outline-dark">Go to question</a>
+                    </div>
+                </div>
+				
+				
+				</div>
+				
+				
+				</div>
+		
+		
+		
+		{% endfor %}
+		
+    </div>
+	
+	
+
+</div>
+
+<style>
+.col-9{
+margin:4em
+}
+
+control-label{
+text-align:left
+}
+
+h4{
+margin-top:10px
+}
+
+
+</style>
+
+
+
+{% endblock %}
+

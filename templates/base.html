@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<title>{% block title %}{% endblock %} </title>
+<link rel="stylesheet" href= "{{url_for('static', filename='bootstrap.min.css')}}">
+
+<script src="{{url_for('static', filename='jquery-slim.min.js')}}" ></script>
+<script src="{{url_for('static', filename='popper.min.js')}}" ></script>
+<script src="{{url_for('static', filename='bootstrap.js')}}" ></script>
+
+
+
+<nav class="navbar navbar-dark bg-dark justify-content-between" style="background-color: #e3f2fd;">
+  <span class="navbar-brand mb-0 h1">Q n A</span>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+
+{% block content %} {% endblock %}
+
+
+{%block footer %}
+<footer>
+<nav class="navbar navbar-dark bg-dark justify-content-between" style="background-color: #e3f2fd;">
+  <a class="navbar-brand text-center">@copyright 2019</a>
+</nav>
+
+</footer>
+
+{%endblock%}
+<style>
+.navbar-brand{
+
+text-align:center
+
+}
+
+
+</style>
+
+
+</html>

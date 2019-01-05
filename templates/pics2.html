@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{%import "bootstrap/wtf.html" as wtf%}
+
+{% block title %} pics {% endblock %}
+
+
+{% block content %}
+
+<div class= "container">
+
+    <div class= "row">
+
+        <div class= "col-9">
+		    <div class= "text-center">
+			
+			{{wtf.quick_forms(form}}
+			
+			</div>
+
+            <div class="text-center">
+                <img src="{{url_for('static', filename='images/10279_049.jpg')}}" class="img-thumbnail"  alt="Image">
+            </div>
+			
+			<div class="text-center">
+                <img src="{{url_for('static', filename='images/10279_095.jpg')}}" class="img-thumbnail"  alt="Image">
+            </div>
+            
+			<div class="text-center">
+                <img src="{{url_for('static', filename='images/10279_135.jpg')}}" class="img-thumbnail"  alt="Image">
+            </div>
+			
+			<div class="text-center">
+                <img src="{{url_for('static', filename='images/10279_166.jpg')}}" class="img-thumbnail"  alt="Image">
+            </div>
+			
+			<div class="container-fluid">
+			
+			    <div class="row">
+				
+				    <div class="col-md-auto">
+					
+					    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src= "{{url_for('static', filename='images/10279_171.jpg')}}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                                </div>
+                        </div>
+					
+					
+					
+				
+				
+				
+                    </div>
+					
+					<div class="col-md-auto">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{url_for('static', filename='images/10279_196.jpg')}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+
+<div class="col-md-auto">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{url_for('static', filename='images/10279_199.jpg')}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+				
+				</div>
+			
+			
+			
+			</div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
